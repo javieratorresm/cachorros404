@@ -23,7 +23,7 @@ export default {
       menu: [
         {
           header: true,
-          title: 'Main Navigation'
+          title: 'Menú'
         },
         {
           href: '/',
