@@ -3,6 +3,9 @@
     <div class="demo">
       <h1>Cachorros404</h1>
       <div>
+
+      <img src="demo/img/gc7.png" alt="logo cachorros">
+
       </div>
       <hr style="margin: 50px 0px;border: 1px solid #e3e3e3;">
       <router-view/>
@@ -39,7 +42,7 @@ export default {
           href: '/configuracion',
           title: 'Configuracion',
           icon: 'fa fa-cog',
-    
+
         },
         {
           header: true,
