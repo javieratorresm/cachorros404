@@ -1,16 +1,19 @@
 <template>
   <div id="demo" :class="[{'collapsed' : collapsed}]">
-    <div class="demo">
-      <h1>Cachorros404</h1>
-      <div>
-
+    <div class="grid">
+      <h1>Cachorro404</h1>
+      <div class="div1">
       <img src="demo/img/gc7.png" alt="logo cachorros">
-
       </div>
       <hr style="margin: 50px 0px;border: 1px solid #e3e3e3;">
       <router-view/>
-    </div>
+      <div class="div2">
+      </div>
+
+
+
     <sidebar-menu :menu="menu" :collapsed="collapsed" @collapse="onCollapse" />
+    </div>
   </div>
 </template>
 
@@ -130,7 +133,7 @@ export default {
           ]
         }
       ],
-      collapsed: false,
+      collapsed: true,
       themes: ['', 'default-theme'],
       selectedTheme: 'default-theme'
     }

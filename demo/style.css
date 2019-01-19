@@ -1,0 +1,89 @@
+
+
+.grid{
+  display: grid;
+  width: 100%;
+  max-width: 850px;
+  margin:0px 150px auto;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 100px);
+  grid-gap: 10px;
+
+}
+
+
+.div1{
+    display: inline;
+
+    grid-column: 1 / span 3;
+    grid-row: 1 / span 3;
+
+    position: relative;
+    background: #212121;
+    background-size: .2em 100%;
+    font: 40px Open Sans, Impact;
+    margin: 1px;
+
+}
+
+
+.text:hover {
+  fill: none;
+  stroke-width: 2;
+  stroke-linejoin: round;
+  stroke-dasharray: 70 330;
+  stroke-dashoffset: 0;
+  -webkit-animation: stroke 5s infinite linear;
+  animation: stroke 5s infinite linear;
+}
+
+.text:hover:nth-child(n + 1) {
+  stroke: #F2385A;
+  -webkit-animation-delay: -4s;
+  animation-delay: -4s;
+
+
+}
+.text:nth-child(n + 2) {
+  stroke: #3AA1BF;
+  -webkit-animation-delay: -4s;
+  animation-delay: -4s;
+}
+
+
+.div2{
+      background: hsla(0, 0%, 0%, .9);
+      position: relative;
+      font: normal 40px Varela Round, sans-serif;
+      height: 40px;
+	     left: 0;
+	    letter-spacing: 5px;
+	    margin: 0px 0 0 0;
+      color:#ffff;
+      text-align: center;
+
+
+}
+
+.div2:hover {
+
+color: hsla(0, 0%, 0%, .9);
+  font: normal 40px Varela Round, sans-serif;
+
+  width: 100%;
+  animation: move linear 2000ms infinite;
+
+
+}
+
+.div3 {
+
+
+      background: hsla(0, 0%, 0%, .9);
+      position: relative;
+      font: 40px "Finger Paint";
+      color:#ffff;
+      text-align: center;
+
+
+}
