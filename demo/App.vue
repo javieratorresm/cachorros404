@@ -1,6 +1,17 @@
 <template>
+<div class="grid">
+
   <div id="demo" :class="[{'collapsed' : collapsed}]">
-    <div class="grid">
+
+  <div class="nav">
+  <nav v-bind:class="active" v-on:click.prevent>
+    <a href="#" class="home" v-on:click="makeActive('home')">Home</a>
+    <a href="#" class="projects" v-on:click="makeActive('projects')">Projects</a>
+    <a href="#" class="services" v-on:click="makeActive('services')">Services</a>
+    <a href="#" class="contact" v-on:click="makeActive('contact')">Contact</a>
+  </nav>
+  </div>
+
       <h1>Cachorro404</h1>
       <div class="div1">
       <img src="demo/img/gc7.png" alt="logo cachorros">
@@ -13,8 +24,8 @@
 
 
     <sidebar-menu :menu="menu" :collapsed="collapsed" @collapse="onCollapse" />
-    </div>
-  </div>
+  </div>    </div>
+
 </template>
 
 <script>
@@ -26,6 +37,8 @@ export default {
   name: 'app',
   data() {
     return {
+
+      active: 'home',
       menu: [
         {
           header: true,
@@ -138,10 +151,14 @@ export default {
       selectedTheme: 'default-theme'
     }
   },
+
   methods: {
     onCollapse(val) {
       console.log(`collapsed ${val}`)
       this.collapsed = val
+    },
+    makeActive: function(item){
+        this.active = item;
     }
   }
 }
@@ -163,6 +180,7 @@ body {
 
 #demo {
   padding-left: 350px;
+  marging-top:50px;
 }
 #demo.collapsed {
   padding-left: 50px;
