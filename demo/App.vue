@@ -1,30 +1,32 @@
 <template>
+<div>
+
+<div class="nav">
+<nav v-bind:class="active" v-on:click.prevent>
+  <a href="#" class="home" v-on:click="makeActive('home')">Home</a>
+  <a href="#" class="projects" v-on:click="makeActive('projects')">Projects</a>
+  <a href="#" class="services" v-on:click="makeActive('services')">Services</a>
+  <a href="#" class="contact" v-on:click="makeActive('contact')">Contact</a>
+</nav>
+</div>
+<div class="div1">
+<img src="demo/img/gc7.png" alt="logo cachorros">
+</div>
 <div class="grid">
 
-  <div id="demo" :class="[{'collapsed' : collapsed}]">
 
-  <div class="nav">
-  <nav v-bind:class="active" v-on:click.prevent>
-    <a href="#" class="home" v-on:click="makeActive('home')">Home</a>
-    <a href="#" class="projects" v-on:click="makeActive('projects')">Projects</a>
-    <a href="#" class="services" v-on:click="makeActive('services')">Services</a>
-    <a href="#" class="contact" v-on:click="makeActive('contact')">Contact</a>
-  </nav>
-  </div>
-
-      <h1>Cachorro404</h1>
-      <div class="div1">
-      <img src="demo/img/gc7.png" alt="logo cachorros">
-      </div>
-      <hr style="margin: 50px 0px;border: 1px solid #e3e3e3;">
-      <router-view/>
       <div class="div2">
       </div>
 
-
-
+</div>
+  <div id="demo" :class="[{'collapsed' : collapsed}]">
     <sidebar-menu :menu="menu" :collapsed="collapsed" @collapse="onCollapse" />
-  </div>    </div>
+  </div>
+
+<div>
+
+</div>
+</div>
 
 </template>
 
@@ -175,7 +177,6 @@ html {
 
 body {
   font-family: 'Source Sans Pro', sans-serif;
-  background-color: #f2f4f7;
 }
 
 #demo {
@@ -194,4 +195,72 @@ body {
   background-color: #ff2a2a;
   color: #fff;
 }
+
+.grid{
+  display: grid;
+  width: 100%;
+  max-width: 850px;
+  margin:  auto;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 100px);
+  grid-gap: 10px;
+
+}
+
+.div1{
+
+    display: center;
+    margin-left:100px;
+    margin-top: 20px;
+    margin-right: auto;
+    grid-column: 1 / span 3;
+    grid-row: 1 / span 3;
+
+    position: relative;
+    background: #ffff;
+    background-size: .2em 100%;
+    font: 40px Open Sans, Impact;
+
+}
+
+.nav{
+display:grid;
+margin: auto ;
+margin-left: 49px;
+box-shadow:0 1px 1px #ccc;
+border-radius:2px;
+background-color:#2a2a2e;
+padding: 18px;
+}
+
+.nav a{
+    padding: 18px 30px;
+    color:#fff;
+    font-weight:bold;
+    font-size:16px;
+    text-decoration:none;
+    line-height:1;
+    text-transform: uppercase;
+    background-color:transparent;
+
+    -webkit-transition:background-color 0.25s;
+    -moz-transition:background-color 0.25s;
+    transition:background-color 0.25s;
+}
+
+.nav a:first-child{
+    border-radius:2px 0 0 2px;
+}
+
+.nav a:last-child{
+    border-radius:0 2px 2px 0;
+}
+
+.nav.home .home,
+.nav.projects .projects,
+.nav.services .services,
+.nav .contact{
+    background-color:#0000;
+}
+
 </style>
