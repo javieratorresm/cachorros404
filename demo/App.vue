@@ -13,9 +13,33 @@
 <img src="demo/img/gc7.png" alt="logo cachorros">
 </div>
 <div class="grid">
+<div class="contenedor1">
+<div>
+<h1> Redes sociales</h1>
 
+</div>
+<div>
+<h1> FB</h1>
 
-      <div class="div2">
+</div>
+
+<div>
+
+<h1> FB</h1>
+</div>
+</div>
+      <div class="contenedor2">
+      <div>
+      <h1> Eventos</h1>
+      </div>
+
+      <div>
+      <h1> FB</h1>
+      </div>
+
+      </div>
+      <div class="contenedor1">
+
       </div>
 
 </div>
@@ -199,11 +223,7 @@ body {
 .grid{
   display: grid;
   width: 100%;
-  max-width: 850px;
-  margin:  auto;
-  grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(3, 100px);
-  grid-gap: 10px;
 
 }
 
@@ -261,6 +281,32 @@ padding: 18px;
 .nav.services .services,
 .nav .contact{
     background-color:#0000;
+}
+
+.contenedor1{
+grid-template-columns: repeat(3, 1fr);
+display: grid;
+width: 100%;
+margin-left: 50px;
+margin-top: auto;
+margin-bottom: auto;
+grid-template-rows: repeat(1, auto);
+grid-gap: 10px;
+background-color: #fffff;
+
+}
+
+.contenedor2{
+grid-template-columns: repeat(3, 1fr);
+display: grid;
+width: 100%;
+margin-left: 50px;
+margin-top: auto;
+margin-bottom: auto;
+grid-template-rows: repeat(1, auto);
+grid-gap: 10px;
+background-color: #EA785F;
+
 }
 
 </style>
