@@ -1,5 +1,5 @@
 <template>
-<div>
+<div class= "general">
 
 <div class="nav">
 <nav v-bind:class="active" v-on:click.prevent>
@@ -49,6 +49,14 @@
 
 <div>
 
+</div>
+<div class="footer">
+
+<div > Holi </div>
+<div > Holi </div>
+<div > Holi </div>
+
+<div class="div2"> Siguenos en redes sociales y aaslkdaskdjasdalskdjaksdjalksjdk </div>
 </div>
 </div>
 
@@ -195,12 +203,13 @@ export default {
 
 body,
 html {
-  margin: 0;
   padding: 0;
 }
 
 body {
   font-family: 'Source Sans Pro', sans-serif;
+  width: 100%;
+  margin: auto;
 }
 
 #demo {
@@ -224,7 +233,16 @@ body {
   display: grid;
   width: 100%;
   grid-template-rows: repeat(3, 100px);
+  max-width: 850px;
 
+
+}
+
+.general{
+
+display: inline-block;
+width: 100%;
+height: 100%;
 }
 
 .div1{
@@ -238,6 +256,19 @@ body {
 
     position: relative;
     background: #ffff;
+    background-size: .2em 100%;
+    font: 40px Open Sans, Impact;
+
+}
+
+.div2{
+
+    display: grid;
+    margin-left:49px;
+    margin-top: 5px;
+    grid-column-start: 1;
+    grid-column-end: 4;
+    position: relative;
     background-size: .2em 100%;
     font: 40px Open Sans, Impact;
 
@@ -306,6 +337,19 @@ margin-bottom: auto;
 grid-template-rows: repeat(1, auto);
 grid-gap: 10px;
 background-color: #EA785F;
+
+}
+
+.footer{
+display:grid;
+margin-left: 49px;
+box-shadow:0 1px 1px #ccc;
+border-radius:2px;
+background-color:#2a2a2e;
+padding: 100px;
+grid-template-rows: repeat(1, auto);
+grid-template-columns: repeat(3, 1fr);
+
 
 }
 
