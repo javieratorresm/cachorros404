@@ -233,14 +233,12 @@ body {
   display: grid;
   width: 100%;
   grid-template-rows: repeat(3, 100px);
-  max-width: 850px;
 
 
 }
 
 .general{
 
-display: inline-block;
 width: 100%;
 height: 100%;
 }
@@ -285,6 +283,8 @@ padding: 18px;
 }
 
 .nav a{
+float: right;
+
     padding: 18px 30px;
     color:#fff;
     font-weight:bold;
