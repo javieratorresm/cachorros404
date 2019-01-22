@@ -1,6 +1,8 @@
 <template>
 <div class= "general">
 
+
+
 <div class="nav">
 <nav v-bind:class="active" v-on:click.prevent>
   <a href="#" class="home" v-on:click="makeActive('home')">Home</a>
@@ -8,7 +10,9 @@
   <a href="#" class="services" v-on:click="makeActive('services')">Services</a>
   <a href="#" class="contact" v-on:click="makeActive('contact')">Contact</a>
 </nav>
+
 </div>
+<!--
 <div class="div1">
 <img src="demo/img/gc7.png" alt="logo cachorros">
 </div>
@@ -42,11 +46,44 @@
 
       </div>
 
+
 </div>
+
   <div id="demo" :class="[{'collapsed' : collapsed}]">
     <sidebar-menu :menu="menu" :collapsed="collapsed" @collapse="onCollapse" />
   </div>
+-->
+<div class="logos horizontal">
+  <div>
+    <img src="demo/img/logo_usach.jpg" width="200"  alt="logo usach">
+  </div>
+  <div>
+  <img src="demo/img/gc7.png" width="400" alt="logo cachorros">
+  </div>
 
+</div>
+<div class=" container1 horizontal" style="margin-left: 3%;">
+  <div class="row-menu vertical ">
+
+    <div class="menu-element"><p><b>Eventos</b></p></div>
+    <div class="menu-element"><p><b>Noticias</b></p></div>
+    <div class="menu-element"><p><b>Perfiles</b></p></div>
+    <div class="menu-element"><p><b>Quienes somos</b></p></div>
+  </div>
+
+  <div class="frase">
+
+  </div>
+
+</div>
+<div class="container2 horizontal">
+  <div><img src="demo/img/que.PNG" width="150"   alt="que"></div>
+  <div><img src="demo/img/quienes.PNG" width="150"  alt="quienes"></div>
+  <div><img src="demo/img/como.PNG" width="150" alt="como"></div>
+
+</div>
+
+<!--
 <div>
 
 </div>
@@ -58,6 +95,7 @@
 
 <div class="div2"> Siguenos en redes sociales y aaslkdaskdjasdalskdjaksdjalksjdk </div>
 </div>
+-->
 </div>
 
 </template>
@@ -337,6 +375,8 @@ margin-bottom: auto;
 grid-template-rows: repeat(1, auto);
 grid-gap: 10px;
 background-color: #EA785F;
+justify-content: space-between;
+align-items: center;
 
 }
 
@@ -352,5 +392,48 @@ grid-template-columns: repeat(3, 1fr);
 
 
 }
+.container1{
+  padding-left: 7%;
+}
+.container2{
+  width: 85%;
+  height: 200px;
+  margin-top: 2%;
+  background: #CE3F0C;
+  justify-content: center;
+  align-items: center;
+  margin-left: 7%;
 
+
+}
+.row-menu{
+
+  background: #EEEEEE;
+}
+.menu-element{
+  display: flex;
+  border-style: groove;
+  justify-content: center;
+}
+.frase{
+  width: 80%;
+  height: 225px;
+  border-style: groove;
+
+}
+.horizontal{
+  display:flex;
+  flex-direction: row;
+}
+.vertical{
+  display: flex;
+  flex-direction: column;
+}
+.logos{
+  padding-left: 5%;
+  padding-right: 40%;
+  align-items: flex-start;
+  justify-content: space-between;
+
+}
 </style>
