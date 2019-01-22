@@ -76,11 +76,28 @@
   </div>
 
 </div>
-<div class="container2 horizontal">
-  <div><img src="demo/img/que.PNG" width="150"   alt="que"></div>
-  <div><img src="demo/img/quienes.PNG" width="150"  alt="quienes"></div>
+<div class="contenedor2">
+  <div class="center-img"><img src="demo/img/que.PNG" width="150"   alt="que"></div>
+  <div><img class="center-img" src="demo/img/quienes.PNG" width="150"  alt="quienes"></div>
   <div><img src="demo/img/como.PNG" width="150" alt="como"></div>
 
+</div>
+<div class="contenedor2" style="background-color: #BDBDBD; padding-top: 60px;">
+  <div><img src="demo/img/tweet.PNG" width="250"   alt="tweet"></div>
+  <div class="vertical info-white">
+    <p>Cachorro 404 es una iniciativa del departamento de Ingeniería
+    Informática USACH</p>
+
+    <p>Síguenos en redes!</p>
+
+  </div>
+  <div class ="vertical info-white" style="text-align: left;">
+    <p>Links de interés</p>
+    <p class="link">Link 1</p>
+    <p class="link">Link 2</p>
+    <p class="link">Link 3</p>
+
+  </div>
 </div>
 
 <!--
@@ -99,7 +116,7 @@
 </div>
 
 </template>
-
+<script src="path/to/vue-awesome/dist/vue-awesome.js"></script>
 <script>
 const separator = {
   template: `<hr style="border-color: rgba(0, 0, 0, 0.1); margin: 20px;">`
@@ -274,6 +291,9 @@ body {
 
 
 }
+.center-img{
+  align-self: center;
+}
 
 .general{
 
@@ -368,17 +388,23 @@ background-color: #fffff;
 .contenedor2{
 grid-template-columns: repeat(3, 1fr);
 display: grid;
-width: 100%;
-margin-left: 50px;
+width: 1175px;
+margin-left: 173px;
 margin-top: auto;
 margin-bottom: auto;
 grid-template-rows: repeat(1, auto);
 grid-gap: 10px;
 background-color: #EA785F;
-justify-content: space-between;
-align-items: center;
+padding-left: 125px;
 
 }
+.info-white{
+  text-align: center;
+  color:white;
+  padding-left: 5%;
+  padding-right: 35%;
+}
+
 
 .footer{
 display:grid;
@@ -394,15 +420,17 @@ grid-template-columns: repeat(3, 1fr);
 }
 .container1{
   padding-left: 7%;
+  width: 1480px;
 }
 .container2{
   width: 85%;
   height: 200px;
   margin-top: 2%;
   background: #CE3F0C;
-  justify-content: center;
-  align-items: center;
   margin-left: 7%;
+  justify-content: space-between;
+  align-items: center;
+
 
 
 }
@@ -435,5 +463,8 @@ grid-template-columns: repeat(3, 1fr);
   align-items: flex-start;
   justify-content: space-between;
 
+}
+.link{
+  border-bottom: groove;
 }
 </style>
