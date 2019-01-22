@@ -62,7 +62,7 @@
   </div>
 
 </div>
-<div class=" container1 horizontal" style="margin-left: 3%;">
+<div class=" container1 horizontal" >
   <div class="row-menu vertical ">
 
     <div class="menu-element"><p><b>Eventos</b></p></div>
@@ -72,7 +72,9 @@
   </div>
 
   <div class="frase">
-
+    <div class="imgContainer">
+      <img  src="demo/img/estudiantes.jpg"   alt="estudiantes">
+    </div>
   </div>
 
 </div>
@@ -82,8 +84,8 @@
   <div><img src="demo/img/como.PNG" width="150" alt="como"></div>
 
 </div>
-<div class="contenedor2" style="background-color: #BDBDBD; padding-top: 60px;">
-  <div><img src="demo/img/tweet.PNG" width="250"   alt="tweet"></div>
+<div class="contenedor2" style="background-color: #BDBDBD; padding-top: 60px; height: 200px;">
+  <div><img src="demo/img/tweet.PNG" width="180"   alt="tweet"></div>
   <div class="vertical info-white">
     <p>Cachorro 404 es una iniciativa del departamento de Ingeniería
     Informática USACH</p>
@@ -93,9 +95,9 @@
   </div>
   <div class ="vertical info-white" style="text-align: left;">
     <p>Links de interés</p>
-    <p class="link">Link 1</p>
-    <p class="link">Link 2</p>
-    <p class="link">Link 3</p>
+    <a class="link" href="https://www.udesantiagovirtual.cl/wp/">UdeSantiagoVirtual</a>
+    <a class="link" href="https://www.segic.cl/">Segic</a>
+    <a class="link" href="https://loa.usach.cl/loa-fing/index.php">Loa</a>
 
   </div>
 </div>
@@ -419,8 +421,9 @@ grid-template-columns: repeat(3, 1fr);
 
 }
 .container1{
-  padding-left: 7%;
-  width: 1480px;
+
+  width: 1491px;
+  margin-left: 173px;
 }
 .container2{
   width: 85%;
@@ -437,16 +440,24 @@ grid-template-columns: repeat(3, 1fr);
 .row-menu{
 
   background: #EEEEEE;
+  border-left: solid;
+  border-bottom: solid;
+ border-width: 1px;
+  border-color: #f0f0f5;
 }
 .menu-element{
   display: flex;
-  border-style: groove;
+  border-top: solid;
   justify-content: center;
+  border-width: 1px;
+  border-color: #f0f0f5;
 }
 .frase{
   width: 80%;
   height: 225px;
-  border-style: groove;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #f0f0f5;
 
 }
 .horizontal{
@@ -459,12 +470,23 @@ grid-template-columns: repeat(3, 1fr);
 }
 .logos{
   padding-left: 5%;
-  padding-right: 40%;
+  padding-right: 45%;
   align-items: flex-start;
   justify-content: space-between;
 
 }
 .link{
-  border-bottom: groove;
+  border-bottom: solid;
+  border-color: white;
+  margin-bottom:  20px;
+}
+.imgContainer {
+  overflow: hidden;
+  width: 1194px;
+  height: 225px;
+}
+.imgContainer img {
+  width: 1194px;
+  height: 290px;
 }
 </style>
